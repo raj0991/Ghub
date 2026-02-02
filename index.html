@@ -179,7 +179,7 @@
     </section>
 
     <!-- HINT -->
-    <div class="hint" id="hint">“No” seems a bit shy 😈</div>
+    <div class="hint" id="hint">"No" seems a bit shy 😈</div>
 
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
@@ -287,7 +287,10 @@
       if (d < 140) moveNo(e.clientX, e.clientY);
     });
 
-    noBtn.addEventListener("click", e => e.preventDefault());
+    /* ---------- NO BUTTON CLICK ---------- */
+    noBtn.addEventListener("click", () => {
+      yesBtn.click();
+    });
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
@@ -300,7 +303,3 @@
   </script>
 </body>
 </html>
-
-
-
-
